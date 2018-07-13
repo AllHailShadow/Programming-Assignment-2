@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The following two functions are designed to put a matrix in a cache, then solve for its inverse
+## only if the inverse matrix is not already in the cache
 
-## Write a short comment describing this function
+## This function creates a list that sets and gets the values of both the initial matrix 
+## and its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 i <- NULL
@@ -18,7 +19,8 @@ list(set=set,
      getinverse=getinverse)
 }
 
-## Write a short comment describing this function
+## This function computes the inverse of the matrix in the above function
+## If the inverse has already been calculated, it will instead retrieve the inverse from the cache
 
 cacheSolve <- function(x, ...) {
       i <- x$getinverse()
